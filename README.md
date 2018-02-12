@@ -45,7 +45,7 @@ Installing via pip:
 $ (env)> pip install requirement
 ```
 
-* textcleaner [Find textcleaner.sh here!](http://vbridge.co.uk/2012/11/05/how-we-tuned-tesseract-to-perform-as-well-as-a-commercial-ocr-package/)
+* textcleaner [Find textcleaner.sh here!](http://www.fmwconcepts.com/imagemagick/textcleaner/index.php)
 
 ## Bugs
 
