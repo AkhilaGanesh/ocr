@@ -51,4 +51,11 @@ $ (env)> pip install requirement
 
 Tesseract works best when there are extremely clean segmentations of the foreground text from the background.
 
-Furthermore these segmentations need to be as high resolution (DPI) as possible and the characters in the input image cannot appear “pixelated” after segmentation. If characters do appear pixelated then Tesseract will struggle to correctly recognize the text. To improve the accuracy preprocessing must be done. Textcleaner has been used to improve the quality of the image reuslting in 20-30% increase in Tesseract accuracy. 
+Furthermore these segmentations need to be as high resolution (DPI) as possible and the characters in the input image cannot appear “pixelated” after segmentation. If characters do appear pixelated then Tesseract will struggle to correctly recognize the text. To improve the accuracy preprocessing must be done. Textcleaner has been used to improve the quality of the image reuslting in 20-30% increase in Tesseract accuracy.
+
+## Running Tesseract
+
+```
+docker build -t app
+docker run -p 5000:5000 --name app app
+```
