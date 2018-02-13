@@ -61,3 +61,4 @@ Furthermore these segmentations need to be as high resolution (DPI) as possible 
 docker build -t app
 docker run -p 5000:5000 --name app app
 ```
+Used postman to send request and get response. 
