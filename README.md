@@ -18,10 +18,6 @@ Prerequisites:
 
 * You will need the Python Imaging Library (PIL) (or the Pillow fork). Under Debian/Ubuntu, this is the package python-imaging or python3-imaging.
 
-Installing via pip:
-```
-$ (env)> pip install pytesseract
-```
 ## Usage
 
 To retrieve specific information from receipts like
@@ -42,11 +38,6 @@ To retrieve specific information from receipts like
 
 * opencv-python
 
-Installing via pip:
-```
-$ (env)> pip install requirement
-```
-
 * textcleaner [Find textcleaner.sh here!](http://www.fmwconcepts.com/imagemagick/textcleaner/index.php)
 
 ## Bugs
@@ -59,6 +50,6 @@ Furthermore these segmentations need to be as high resolution (DPI) as possible 
 
 ```
 docker build -t app
-docker run -p 5000:5000 --name app app
+docker run -p 5000:5000 -v src_path/to/images:/code/images --name app app
 ```
-Used postman to send request and get response. 
+Usage of POST method to send image as request and receive a json string format as response.
