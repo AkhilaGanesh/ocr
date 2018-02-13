@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Tesseract is an open source text recognizer (OCR) Engine, available under the Apache 2.0 license. It can be used directly, or (for programmers) using an API to extract printed text from images. It supports a wide variety of languages.
+Tesseract is an open source text recognizer (OCR) Engine, available under the Apache 2.0 license. It can be used directly, or for programmers) using an API to extract printed text from images. It supports a wide variety of languages.
 
 The latest stable version is 3.05.01, released on June 1, 2017. Latest source code for 3.05 is available from 3.05 branch on github.
 
@@ -17,6 +17,7 @@ Prerequisites:
 ## Usage
 
 To retrieve specific information from receipts like
+
 * Date
 * Total
 * Invoice Number
@@ -48,4 +49,27 @@ Furthermore these segmentations need to be as high resolution (DPI) as possible 
 docker build -t app
 docker run -p 5000:5000 -v src_path/to/images:/code/images --name app app
 ```
-Usage of POST method to send image as request and receive a json string format as response.
+## Let's test it for this image
+
+![alt text](http://images.indianexpress.com/2017/07/bill-pune-759.jpg)
+
+```
+curl -X POST \
+ http://0.0.0.0:5000/ocr \
+ -H 'Cache-Control: no-cache' \
+ -H 'Content-Disposition: attachment' \
+ -H 'Postman-Token: 75b9b7f4-4212-1fae-c79d-020b1ac13abe' \
+ -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+ -F file=<img_path>
+ 
+```
+
+## You should see a response like so:
+
+```
+{
+"date" : "01/07/17" 
+"invoice_no" : "459"
+"total": 90.00
+}
+```
