@@ -24,9 +24,11 @@ $ (env)> pip install pytesseract
 ```
 ## Usage
 
-To retrieve specific information from receipts
- 
-![Receipt](C:\Users\DELL\Desktop\bill.jpg)
+To retrieve specific information from receipts like
+* Date
+* Total
+* Invoice Number
+
 
 ## Requirements
 
